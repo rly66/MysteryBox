@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String  @unique
+  password     String
+  records   DrawRecord[]
+  createdAt DateTime @default(now())
+}
+
+model Box {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  imageUrl    String
+  claimed     Boolean  @default(false)
+  records     DrawRecord[]
+  createdAt   DateTime @default(now())
+}
+
+model DrawRecord {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  boxId     Int
+  user      User     @relation(fields: [userId], references: [id])
+  box       Box      @relation(fields: [boxId], references: [id])
+  createdAt DateTime @default(now())
+}
