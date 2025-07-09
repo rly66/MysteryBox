@@ -204,15 +204,15 @@ async function initializeData() {
 
     // 创建9个盲盒
     const boxData = [
-      { name: "神秘盲盒 #1", description: "内含稀有物品A", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #2", description: "内含稀有物品B", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #3", description: "内含限量款物品C", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #4", description: "内含隐藏款物品D", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #5", description: "内含普通物品E", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #6", description: "内含高级物品F", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #7", description: "内含联名款物品G", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #8", description: "内含典藏款物品H", imageUrl: "/box-icon.png", claimed: false },
-      { name: "神秘盲盒 #9", description: "内含终极稀有款I", imageUrl: "/box-icon.png", claimed: false }
+      { name: "神秘盲盒 #1", description: "破🥚壳而出的蛋黄猫", imageUrl: "public/img/hi.gif", claimed: false },
+      { name: "神秘盲盒 #2", description: "扮演大圣的蛋黄猫", imageUrl: "public/img/swk.gif", claimed: false },
+      { name: "神秘盲盒 #3", description: "因太肥胖而头被卡住的蛋黄猫", imageUrl: "public/img/chongya.gif", claimed: false },
+      { name: "神秘盲盒 #4", description: "专心摸🐟的蛋黄猫", imageUrl: "public/img/moyu.gif", claimed: false },
+      { name: "神秘盲盒 #5", description: "惊喜隐藏款！嘿嘿～我是奶龙😉", imageUrl: "public/img/nl.gif", claimed: false },
+      { name: "神秘盲盒 #6", description: "边听歌🎵边写oj的蛋黄猫", imageUrl: "public/img/tingge.gif", claimed: false },
+      { name: "神秘盲盒 #7", description: "正在嘚瑟地看着你的蛋黄猫", imageUrl: "public/img/dese.gif", claimed: false },
+      { name: "神秘盲盒 #8", description: "爱打篮球🏀的蛋黄猫", imageUrl: "public/img/dalanqiu.gif", claimed: false },
+      { name: "神秘盲盒 #9", description: "展示美妙舞姿的蛋黄猫", imageUrl: "public/img/tiaowu.gif", claimed: false }
     ];
 
     await prisma.box.createMany({ data: boxData });
